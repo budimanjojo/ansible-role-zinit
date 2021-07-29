@@ -29,5 +29,8 @@ galaxy_info:
   - ubuntu
   - archlinux
   - debian
+  - zsh
+  - zinit
+  - dotfiles
 
 dependencies: []

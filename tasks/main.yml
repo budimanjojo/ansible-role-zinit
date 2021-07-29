@@ -1,5 +1,5 @@
 ---
-- name: Ensure required packages are installed
+- name: Ensure needed packages exist
   package:
     name: "{{ zinit_packages }}"
     state: present
