@@ -1,17 +1,17 @@
 ---
 - name: Ensure needed packages exist
-  package:
+  ansible.builtin.package:
     name: "{{ zinit_packages }}"
     state: present
 
 - name: Check if zinit is installed
-  stat:
+  ansible.builtin.stat:
     path: ~/.zinit/bin/.git
   register: zinit_installed
   become: "{{ zinit_become | bool }}"
 
 - name: Installing zinit
-  shell: >
+  ansible.builtin.shell: >
     sh -c
     "$(curl -fsSL
     https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"

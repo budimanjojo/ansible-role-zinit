@@ -1,4 +1,4 @@
 ---
 - name: Running zinit update
-  command: "/bin/zsh -c 'source ~/.zshrc; zinit update'"
+  ansible.builtin.command: "/bin/zsh -c 'source ~/.zshrc; zinit update'"
   become: "{{ zinit_become | bool }}"
